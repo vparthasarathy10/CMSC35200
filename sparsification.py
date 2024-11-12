@@ -1,11 +1,7 @@
-# Block 1: Fine-tuning the Model
-
 # Clone the nanoGPT repo and install dependencies
 !git clone https://github.com/karpathy/nanoGPT.git
 %cd nanoGPT
 !pip install torch numpy transformers datasets tiktoken tqdm
-
-# Import necessary libraries
 import torch
 import time
 
@@ -21,10 +17,7 @@ train_command = f"python train.py --dataset=shakespeare --n_layer=4 --n_head=4 -
 print(f"Running training with device: {device}")
 !{train_command}
 
-# Check the output directory for the saved model checkpoint
 !ls ./out/
-
-# Block 2: Model Loading, Sparsification, Evaluation, and Plotting
 
 import os
 import numpy as np
@@ -39,7 +32,6 @@ out_dir = "./out"
 fine_tuned_model_path = os.path.join(out_dir, "ckpt.pt")
 device = "cuda" if torch.cuda.is_available() else "cpu"
 
-# Load the tokenizer
 tokenizer = GPT2Tokenizer.from_pretrained('gpt2-medium')
 
 # Load the fine-tuned GPT model checkpoint
@@ -62,13 +54,13 @@ model.to(device)
 model.eval()
 print("Fine-tuned model loaded successfully.")
 
-# Define a set of diverse prompts for evaluation
+# Define Shakespearean-style prompts for evaluation
 prompts = [
-    "Once upon a time, in a distant kingdom,",
-    "The recent economic downturn has led to",
-    "In the year 2050, humans have discovered",
-    "Advancements in AI technology enable us to",
-    "To be or not to be, that is the question."
+    "To be, or not to be, that is the question:",
+    "Shall I compare thee to a summer’s day?",
+    "O Romeo, Romeo! wherefore art thou Romeo?",
+    "Friends, Romans, countrymen, lend me your ears;",
+    "Now is the winter of our discontent,"
 ]
 
 # Function to calculate sparsity
@@ -121,9 +113,9 @@ baseline_loss, baseline_perplexity = evaluate_model_on_prompts(model, prompts)
 print("Baseline (Fine-tuned) model - Average Fine-tune Loss:", baseline_loss)
 print("Baseline (Fine-tuned) model - Average Zero-shot Perplexity:", baseline_perplexity)
 
-# Define sparsity levels to test
 sparsity_levels = [0.1, 0.5, 0.9, 0.95, 0.99]
 results = []
+
 
 # Evaluate the performance of sparsified versions of the fine-tuned model
 for sparsity_level in sparsity_levels:
@@ -168,18 +160,3 @@ plt.grid()
 plt.legend()
 plt.show()
 
-# Sample generation to verify text coherence for sparsified models
-print("Generating samples for each sparsity level...")
-for sparsity_level in sparsity_levels:
-    pruned_model = prune_model(model, sparsity_level)
-    pruned_model.to(device)
-    
-    for prompt in prompts:
-        inputs = tokenizer(prompt, return_tensors="pt").to(device)
-        input_ids = inputs['input_ids']
-        with torch.no_grad():
-            output = pruned_model.generate(input_ids, max_new_tokens=20)
-        generated_text = tokenizer.decode(output[0], skip_special_tokens=True)
-        print(f"Sparsity Level {sparsity_level * 100}% - Prompt: {prompt}")
-        print("Generated Text:", generated_text)
-        print('-' * 50)
