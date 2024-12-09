@@ -54,7 +54,7 @@ def evaluate_models(questions, models):
                 'model_answer': answer
             })
             
-            # Sleep to avoid overwhelming the API
+            # Sleep to avoid overwhelming the API (adjust as needed)
             time.sleep(1)
     
     return results
@@ -70,7 +70,7 @@ def display_results(results):
         print("----------------------------------------------------------------\n")
 
 def main():
-    parser = argparse.ArgumentParser(description="Evaluate Llama Models on a Set of Questions.")
+    parser = argparse.ArgumentParser(description="Evaluate Llama Models and Gemma Model on a Set of Questions.")
     parser.add_argument("--questions", type=str, default="questions.json", help="Path to the questions JSON file.")
     args = parser.parse_args()
 
@@ -96,6 +96,12 @@ def main():
             "api_base": "66.55.67.65",
             "port": 80,
             "model_name": "llama31-405b-fp8"
+        },
+        {
+            "name": "Gemma 2.2B Instruct",
+            "api_base": "127.0.0.1",
+            "port": 1234,
+            "model_name": "gemma-2-2b-instruct"
         }
     ]
 
