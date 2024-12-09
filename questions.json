@@ -1,0 +1,152 @@
+[
+    {
+        "id": 1,
+        "question": "You have 10 apples. You remove 3 apples and slice each of those 3 apples into 4 equal pieces. Counting both the sliced pieces and the remaining whole apples as individual units, how many units do you have in total?",
+        "answer": "19"
+    },
+    {
+        "id": 2,
+        "question": "A farmer has 15 sheep and sells all but 6. How many sheep remain?",
+        "answer": "6"
+    },
+    {
+        "id": 3,
+        "question": "In the word 'MISSISSIPPI', how many times does the substring 'ISS' appear?",
+        "answer": "2"
+    },
+    {
+        "id": 4,
+        "question": "Count how many integers from 1 to 50 (inclusive) contain at least one digit '3'.",
+        "answer": "14"
+    },
+    {
+        "id": 5,
+        "question": "Consider the sequence defined by reading off the digits of the previous term (the 'look-and-say' sequence): 1, 11, 21, 1211, 111221, ... How many digits are in the 6th term?",
+        "answer": "6"
+    },
+    {
+        "id": 6,
+        "question": "A traditional clock strikes according to the hour: 1 at 1:00, 2 at 2:00, ..., 12 at 12:00. In a 24-hour period, how many total strikes occur?",
+        "answer": "156"
+    },
+    {
+        "id": 7,
+        "question": "How many letters are in the English word for the number 40?",
+        "answer": "5"
+    },
+    {
+        "id": 8,
+        "question": "At a party, every person shakes hands with every other person exactly once. If there are 10 people, how many handshakes occur?",
+        "answer": "45"
+    },
+    {
+        "id": 9,
+        "question": "A 4x4x4 cube is made up of smaller 1x1x1 cubes. How many small cubes are there?",
+        "answer": "64"
+    },
+    {
+        "id": 10,
+        "question": "Count the total number of 'e' characters (case-insensitive) in the sentence: 'Eleven elves eagerly eat eclairs every evening.'",
+        "answer": "13"
+    },
+    {
+        "id": 11,
+        "question": "A 6 by 4 rectangle is divided into 1x1 squares. How many 1x1 squares are there?",
+        "answer": "24"
+    },
+    {
+        "id": 12,
+        "question": "Write down all integers from 1 to 99. How many total times do you write the digit '9'?",
+        "answer": "20"
+    },
+    {
+        "id": 13,
+        "question": "Rolling a fair six-sided die three times, how many possible distinct ordered outcomes are there?",
+        "answer": "216"
+    },
+    {
+        "id": 14,
+        "question": "You have 2 identical red balls and 2 identical blue balls. You draw them one by one without replacement. In how many ways can you draw them so that the result is R R B B in that exact order?",
+        "answer": "1"
+    },
+    {
+        "id": 15,
+        "question": "A standard deck has 52 cards. If you deal all the cards equally to 4 players, how many cards does each player get?",
+        "answer": "13"
+    },
+    {
+        "id": 16,
+        "question": "A palindrome reads the same forwards and backwards. What is the length of the shortest palindrome that includes at least one 'a' and one 'b'?",
+        "answer": "3"
+    },
+    {
+        "id": 17,
+        "question": "You can climb a 20-step staircase by taking 1 or 2 steps at a time. In how many distinct ways can you reach the top?",
+        "answer": "10946"
+    },
+    {
+        "id": 18,
+        "question": "How many prime numbers are there between 1 and 50 (excluding 1 and 50)?",
+        "answer": "15"
+    },
+    {
+        "id": 19,
+        "question": "The code to a puzzle box is the number of letters in the spelled-out English word 'seven'. How many letters is that?",
+        "answer": "5"
+    },
+    {
+        "id": 20,
+        "question": "If A=1, B=2, ..., Z=26, what is the sum of the letter values in 'CAT'?",
+        "answer": "24"
+    },
+    {
+        "id": 21,
+        "question": "An equilateral triangle has all angles equal. How many degrees is each angle?",
+        "answer": "60"
+    },
+    {
+        "id": 22,
+        "question": "A 5-digit palindrome number is of the form ABCBA. If the first digit (A) is 4 and the middle digit (C) is 3, what is the last digit?",
+        "answer": "4"
+    },
+    {
+        "id": 23,
+        "question": "Start with 999. The next term is the sum of its digits: 9+9+9=27. Next term: 2+7=9. Next: 9=9. What is the fourth term in this sequence?",
+        "answer": "9"
+    },
+    {
+        "id": 24,
+        "question": "Convert the binary number 1011 to decimal.",
+        "answer": "11"
+    },
+    {
+        "id": 25,
+        "question": "How many trailing zeros does 10! have?",
+        "answer": "2"
+    },
+    {
+        "id": 26,
+        "question": "Folding a sheet of paper in half 5 times doubles the number of layers each time. Starting with 1 layer, how many layers do you have after 5 folds?",
+        "answer": "32"
+    },
+    {
+        "id": 27,
+        "question": "A cube has how many edges?",
+        "answer": "12"
+    },
+    {
+        "id": 28,
+        "question": "Starting with the number 2 and multiplying by 2 a total of 5 times, what number do you end up with?",
+        "answer": "64"
+    },
+    {
+        "id": 29,
+        "question": "How many minutes are in 2 and a half hours?",
+        "answer": "150"
+    },
+    {
+        "id": 30,
+        "question": "Count the total number of characters (including spaces) in the string 'A B C'.",
+        "answer": "5"
+    }
+]
