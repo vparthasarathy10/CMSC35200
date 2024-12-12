@@ -17,6 +17,8 @@ This directory contains code and scripts for performing multi-modal emotion dete
   - Evaluates the trained models on validation and test sets.
   - Reports performance metrics (Accuracy and Weighted F1) and inference times.
 
+These scripts assume the MELD dataset has been downloaded and placed alongside them in the same directory.
+
 ## Requirements
 
 - Python 3.7+
